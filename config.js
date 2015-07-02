@@ -1,5 +1,5 @@
 System.config({
-  "baseURL": "/",
+  "baseURL": "./",
   "transpiler": "babel",
   "babelOptions": {
     "optional": [
@@ -10,6 +10,14 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
+  },
+  "bundles": {
+    "build": [
+      "lib/greeter",
+      "github:components/jquery@2.1.4/jquery",
+      "github:components/jquery@2.1.4",
+      "lib/main"
+    ]
   }
 });
 
